@@ -1,5 +1,5 @@
 site:
-  name: Top Stream
+  name: New American Ventures
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Top Stream
-    template: '%s — Top Stream'
+    default: New American Ventures
+    template: '%s — New American Ventures'
   description: "\U0001F680 The most affordable OTT ad placement for advertising on every plaform provider."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Top Stream
+    site_name: New American Ventures
     images:
       - url: '~/assets/images/topstream-ott.png'
         width: 1200

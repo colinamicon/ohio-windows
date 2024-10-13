@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -9,9 +8,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Top Stream - Revolutionizing OTT Online Streaming',
+  title: 'New American Ventures - Construction Experts',
   metaDescription:
-    'Experience the future of OTT streaming with Top Stream. Discover our innovative solutions for a seamless viewing experience.',
+    'New American Ventures is a leading construction company, specializing in trim and door solutions, and new windows installations.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -30,19 +29,19 @@ const metadata = {
       },
       // { text: 'Learn more', href: '#features', class: 'mx-2' },
     ]}
-    image={{ src: '~/assets/images/topstream-ott.png', alt: 'Top Stream Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'New American Ventures Hero Image' }}
   >
     <Fragment slot="title">
-      Top Stream<span class="text-accent dark:text-white highlight"> Media</span>
+      New American<span class="text-accent dark:text-white highlight"> Ventures</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Top Stream</span> offers precise ad placement and competitive pricing solutions for OTT
-        advertising.</span
+        <span class="font-semibold">New American Ventures</span> provides top-notch construction services, including trim
+        and door solutions, and new windows installations, to ensure your project is completed with precision and care.</span
       >
-      <span class="font-semibold">Top Stream</span> delivers high-performing ad campaigns that connect with your target audience
-      at the right price.
+      <span class="font-semibold">New American Ventures</span> is dedicated to delivering high-quality construction projects
+      that meet your unique needs and exceed your expectations.
     </Fragment>
   </Hero>
 
@@ -50,30 +49,30 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="OTT Advertising"
-    title="Why Top Stream?"
+    tagline="Construction Excellence"
+    title="Why New American Ventures?"
     items={[
       {
-        title: 'Pin point placement',
-        description: 'You pick your audience AND your placement. Guaranteed.',
+        title: 'Tailored Solutions',
+        description: 'We customize our construction services to meet your specific needs and preferences.',
       },
       {
-        title: 'Maximum Impact',
-        description: 'Our software is equipped for precise ad placements to deliver the maximum impact for your brand.',
+        title: 'Quality Craftsmanship',
+        description: 'Our skilled team ensures that every project is completed with the highest standards of quality.',
       },
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'Colorful Image',
+      src: '~/assets/images/hero-image-construction.png', // todo: cma - find image iStock and replace here
+      alt: 'Construction Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Top Stream Media</h3>
-      Taking your ads to the next level: our prices per CPM are a fraction of our competitors, especially with live sports.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">New American Ventures</h3>
+      Elevating your construction projects: our competitive pricing and expert services guarantee satisfaction and durability.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -83,27 +82,27 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Unparalleled CPM Pricing',
-        description: `Top Stream offers a unique advantage in the OTT advertising industry: dramatically undercutting existing CPM prices while ensuring optimal ad placement.`,
+        title: 'Competitive Pricing',
+        description: `New American Ventures offers competitive pricing for our construction services, ensuring you get the best value for your project.`,
       },
       {
-        title: 'Targeted Ad Placement',
+        title: 'Customized Construction Solutions',
         description:
-          'Our ads reach your target audience with precision, whether they are at home, on their mobile device, or on the go.',
+          'Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.',
       },
     ]}
     image={{
-      src: '~/assets/images/topstream-mobile-network.png',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/construction-sidebyside.png',
+      alt: 'Construction Site Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The competitors edge</h3>
-      Our minimum overhead and conservative margins allow us to pass the savings on to you.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Construction Advantage</h3>
+      Our commitment to quality, precision, and customer satisfaction sets us apart in the construction industry.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -112,36 +111,35 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with Top Stream"
-    subtitle="Unlock the full potential of your ad revenue with Top Stream's cutting-edge technology and expert team."
+    title="What you get with New American Ventures"
+    subtitle="Experience the difference with New American Ventures's comprehensive supply and installation solutions for trim, doors, and windows."
     items={[
       {
-        title: 'Advanced Ad Optimization',
-        description: `We allow you access to thousands of behavioral charchateristics so that you can clearly define your ad to reach your optimum customer.`,
+        title: 'Wide Range of Products',
+        description: `We offer a vast selection of high-quality trim, doors, and windows from leading manufacturers, ensuring you find the perfect fit for your project.`,
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Reporting and Analytics',
+        title: 'Expert Installation Services',
         description:
-          'We will provide you with comprehensive reporting that will allow you to see your reach as well as your engagement to your website.  Reporting is the best way to not only calculate your ROI, but allow you to better understand your target market.',
+          'Our team of skilled professionals provides precise and efficient installation services, guaranteeing a flawless finish and minimizing downtime.',
         icon: 'tabler:components',
       },
       {
-        title: 'Dedicated Support Team',
+        title: 'Dedicated Customer Support',
         description:
-          'Our expert support team is always available to help you with any questions or issues you may have.',
+          'Our knowledgeable staff is always available to assist with product selection, technical support, and any other questions you may have.',
         icon: 'tabler:help',
       },
       {
-        title: 'Constant Innovation and Updates',
+        title: 'Competitive Pricing and Availability',
         description:
-          'Top Stream is committed to staying at the forefront of ad streaming technology, with new features and updates released regularly.',
+          'New American Ventures offers competitive pricing and ensures timely delivery of products, helping you stay on schedule and within budget.',
         icon: 'tabler:bulb',
       },
     ]}
   />
-
-  <!-- Note Widget ******************* -->
+  <!-- // Note Widget ******************* -->
 
   <Note />
 
@@ -149,39 +147,39 @@ const metadata = {
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Why Top Stream?"
+    subtitle="Why New American Ventures?"
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'How can you beat any other competitive pricing?',
+        title: 'What sets your construction services apart?',
         description:
-          'We purchase the ad inventory for the same price as any of our competitors, we simply do not have the overhead or the need for the margins that our competitors add to the retail price of their offering.',
+          'We pride ourselves on our attention to detail, commitment to quality, and customer satisfaction. Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.',
       },
       {
-        title: 'How can you provide pinpoint placement?',
+        title: 'How do you ensure quality in your construction projects?',
         description:
-          'Most of our competitors can offer the same pinpoint placement that we can, they just choose not to offer this service, or charge even more for placement.',
+          'We have a rigorous quality control process in place to ensure that every project meets the highest standards of quality. Our team of skilled professionals is dedicated to delivering exceptional results, and we stand behind our work.',
       },
       {
-        title: 'How can you offer more filters than other companies?',
+        title: 'Can you provide customized construction solutions?',
         description:
-          'With over 27,000 different filters dealing with everything from sex, age, income, zip code, credit score etc, it can be overwhelming to build a successful campaign.',
+          'Yes, we offer customized construction solutions to meet your specific needs and preferences. Our team will work closely with you to understand your vision and deliver a tailored solution that meets your expectations.',
       },
       {
-        title: 'Do you track activity to my website?',
+        title: 'What is your process for managing construction projects?',
         description:
-          'We provide the technology for you to allow us to track all of activity we generate to your website.',
+          'We have a proven process in place for managing construction projects, from initial consultation to project completion. Our team will work closely with you to ensure that your project is completed on time, within budget, and to your satisfaction.',
       },
       {
-        title: 'What sets our services apart?',
+        title: 'Do you offer competitive pricing for your construction services?',
         description:
-          'We feel that offering this pinpoint service along with our pricing advantage creates an even more compelling reason to try our services. It takes extra work on our part to work with you to select the correct filters for your ad campaign.',
+          'Yes, we offer competitive pricing for our construction services. We believe in providing the best value for our clients, and we strive to deliver high-quality services at a fair price.',
       },
       {
-        title: 'Why should I choose Top Stream?',
+        title: 'Why should I choose New American Ventures for my construction needs?',
         description:
-          'We will take the time, as your ROI is dependent on it. We strongly feel that a lower price for the exact same product is a compelling reason to try our services.',
+          'We believe that our commitment to quality, precision, and customer satisfaction sets us apart in the construction industry. We take the time to understand your unique needs and preferences, and we deliver tailored construction solutions that meet your expectations.',
       },
     ]}
   />
@@ -199,11 +197,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Top Stream <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Media</span>
+      New American<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Ventures</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Top Stream: Low Price + Pinpoint Placement = Maximum ROI.<br class="hidden md:inline" /> Unlock your ad potential today.
+      New American Ventures<br class="hidden md:inline" /> Building your future
     </Fragment>
   </CallToAction>
 </Layout>
