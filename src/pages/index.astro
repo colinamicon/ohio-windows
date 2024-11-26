@@ -1,16 +1,16 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Note from "~/components/widgets/Note.astro";
+import Features from "~/components/widgets/Features.astro";
+import Content from "~/components/widgets/Content.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
 const metadata = {
-  title: 'Ohio Windows and More - Construction Experts',
+  title: "Ohio Windows and More - Construction Experts",
   metaDescription:
-    'Ohio Windows and More is a leading construction company, specializing in trim and door solutions, and new windows installations.',
+    "Ohio Windows and More is a leading construction company, specializing in trim and door solutions, and new windows installations.",
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,30 +21,33 @@ const metadata = {
   <Hero
     actions={[
       {
-        variant: 'primary',
-        text: 'Contact Us',
-        href: '/contact',
-        icon: 'tabler:list',
-        class: 'mx-2 text-left',
+        variant: "primary",
+        text: "Contact Us",
+        href: "/contact",
+        icon: "tabler:list",
+        class: "mx-2 text-left",
       },
       // { text: 'Learn more', href: '#features', class: 'mx-2' },
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'Ohio Windows and More Hero Image',
+      src: "~/assets/images/hero-image.png",
+      alt: "Ohio Windows and More Hero Image",
     }}
   >
     <Fragment slot="title">
-      New American<span class="text-accent dark:text-white highlight"> Ventures</span>
+      Ohio Windows<span class="text-accent dark:text-white highlight">
+        and More</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Ohio Windows and More</span> provides top-notch construction services, including trim
-        and door solutions and new window installation.</span
+        <span class="font-semibold">Ohio Windows and More</span> provides top-notch
+        construction services, including trim and door solutions and new window installation.</span
       >
       <br />
-      <span class="font-semibold">Ohio Windows and More</span> is dedicated to delivering high-quality construction projects.
+      <span class="font-semibold">Ohio Windows and More</span> is dedicated to delivering
+      high-quality construction projects.
     </Fragment>
   </Hero>
 
@@ -56,24 +59,31 @@ const metadata = {
     title="Why Ohio Windows and More?"
     items={[
       {
-        title: 'Tailored Solutions',
-        description: 'We customize our construction services to meet your specific needs and preferences.',
+        title: "Tailored Solutions",
+        description:
+          "We customize our construction services to meet your specific needs and preferences.",
       },
       {
-        title: 'Quality Craftsmanship',
-        description: 'Our skilled team ensures that every project is completed with the highest standards of quality.',
+        title: "Quality Craftsmanship",
+        description:
+          "Our skilled team ensures that every project is completed with the highest standards of quality.",
       },
     ]}
     image={{
-      src: '~/assets/images/hero-image-construction.png',
-      alt: 'Construction Image',
-      width: '75%',
-      height: 'auto',
+      src: "~/assets/images/hero-image-construction.png",
+      alt: "Construction Image",
+      width: "75%",
+      height: "auto",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ohio Windows and More</h3>
-      Elevating your construction projects: our competitive pricing and expert services guarantee satisfaction and durability.
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Ohio Windows and More
+      </h3>
+      Elevating your construction projects: our competitive pricing and expert services
+      guarantee satisfaction and durability.
     </Fragment>
 
     <Fragment slot="bg">
@@ -87,25 +97,30 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Competitive Pricing',
+        title: "Competitive Pricing",
         description: `Ohio Windows and More offers competitive pricing for our construction services, ensuring you get the best value for your project.`,
       },
       {
-        title: 'Customized Construction Solutions',
+        title: "Customized Construction Solutions",
         description:
-          'Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.',
+          "Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.",
       },
     ]}
     image={{
-      src: '~/assets/images/construction-sidebyside.png',
-      alt: 'Construction Site Image',
-      width: '75%',
-      height: 'auto',
+      src: "~/assets/images/construction-sidebyside.png",
+      alt: "Construction Site Image",
+      width: "75%",
+      height: "auto",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Construction Advantage</h3>
-      Our commitment to quality, precision, and customer satisfaction sets us apart in the construction industry.
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        The Construction Advantage
+      </h3>
+      Our commitment to quality, precision, and customer satisfaction sets us apart
+      in the construction industry.
     </Fragment>
 
     <Fragment slot="bg">
@@ -122,27 +137,27 @@ const metadata = {
     subtitle="Experience the difference with Ohio Windows and More's comprehensive supply and installation solutions for trim, doors, and windows."
     items={[
       {
-        title: 'Wide Range of Products',
+        title: "Wide Range of Products",
         description: `We offer a vast selection of high-quality trim, doors, and windows from leading manufacturers, ensuring you find the perfect fit for your project.`,
-        icon: 'tabler:brand-tailwind',
+        icon: "tabler:brand-tailwind",
       },
       {
-        title: 'Expert Installation Services',
+        title: "Expert Installation Services",
         description:
-          'Our team of skilled professionals provides precise and efficient installation services, guaranteeing a flawless finish and minimizing downtime.',
-        icon: 'tabler:components',
+          "Our team of skilled professionals provides precise and efficient installation services, guaranteeing a flawless finish and minimizing downtime.",
+        icon: "tabler:components",
       },
       {
-        title: 'Dedicated Customer Support',
+        title: "Dedicated Customer Support",
         description:
-          'Our knowledgeable staff is always available to assist with product selection, technical support, and any other questions you may have.',
-        icon: 'tabler:help',
+          "Our knowledgeable staff is always available to assist with product selection, technical support, and any other questions you may have.",
+        icon: "tabler:help",
       },
       {
-        title: 'Competitive Pricing and Availability',
+        title: "Competitive Pricing and Availability",
         description:
-          'Ohio Windows and More offers competitive pricing and ensures timely delivery of products, helping you stay on schedule and within budget.',
-        icon: 'tabler:bulb',
+          "Ohio Windows and More offers competitive pricing and ensures timely delivery of products, helping you stay on schedule and within budget.",
+        icon: "tabler:bulb",
       },
     ]}
   />
@@ -156,37 +171,39 @@ const metadata = {
     title="Frequently Asked Questions"
     subtitle="Why Ohio Windows and More?"
     tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+    classes={{ container: "max-w-6xl" }}
     items={[
       {
-        title: 'What sets your construction services apart?',
+        title: "What sets your construction services apart?",
         description:
-          'We pride ourselves on our attention to detail, commitment to quality, and customer satisfaction. Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.',
+          "We pride ourselves on our attention to detail, commitment to quality, and customer satisfaction. Our team of experts works closely with you to understand your unique needs and preferences, delivering tailored construction solutions that meet your expectations.",
       },
       {
-        title: 'How do you ensure quality in your construction projects?',
+        title: "How do you ensure quality in your construction projects?",
         description:
-          'We have a rigorous quality control process in place to ensure that every project meets the highest standards of quality. Our team of skilled professionals is dedicated to delivering exceptional results, and we stand behind our work.',
+          "We have a rigorous quality control process in place to ensure that every project meets the highest standards of quality. Our team of skilled professionals is dedicated to delivering exceptional results, and we stand behind our work.",
       },
       {
-        title: 'Can you provide customized construction solutions?',
+        title: "Can you provide customized construction solutions?",
         description:
-          'Yes, we offer customized construction solutions to meet your specific needs and preferences. Our team will work closely with you to understand your vision and deliver a tailored solution that meets your expectations.',
+          "Yes, we offer customized construction solutions to meet your specific needs and preferences. Our team will work closely with you to understand your vision and deliver a tailored solution that meets your expectations.",
       },
       {
-        title: 'What is your process for managing construction projects?',
+        title: "What is your process for managing construction projects?",
         description:
-          'We have a proven process in place for managing construction projects, from initial consultation to project completion. Our team will work closely with you to ensure that your project is completed on time, within budget, and to your satisfaction.',
+          "We have a proven process in place for managing construction projects, from initial consultation to project completion. Our team will work closely with you to ensure that your project is completed on time, within budget, and to your satisfaction.",
       },
       {
-        title: 'Do you offer competitive pricing for your construction services?',
+        title:
+          "Do you offer competitive pricing for your construction services?",
         description:
-          'Yes, we offer competitive pricing for our construction services. We believe in providing the best value for our clients, and we strive to deliver high-quality services at a fair price.',
+          "Yes, we offer competitive pricing for our construction services. We believe in providing the best value for our clients, and we strive to deliver high-quality services at a fair price.",
       },
       {
-        title: 'Why should I choose Ohio Windows and More for my construction needs?',
+        title:
+          "Why should I choose Ohio Windows and More for my construction needs?",
         description:
-          'We believe that our commitment to quality, precision, and customer satisfaction sets us apart in the construction industry. We take the time to understand your unique needs and preferences, and we deliver tailored construction solutions that meet your expectations.',
+          "We believe that our commitment to quality, precision, and customer satisfaction sets us apart in the construction industry. We take the time to understand your unique needs and preferences, and we deliver tailored construction solutions that meet your expectations.",
       },
     ]}
   />
@@ -196,15 +213,19 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
-        text: 'Contact Us',
-        href: '/contact',
-        icon: 'tabler:list',
+        variant: "primary",
+        text: "Contact Us",
+        href: "/contact",
+        icon: "tabler:list",
       },
     ]}
   >
     <Fragment slot="title">
-      New American<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Ventures</span>
+      Ohio Windows<br class="block sm:hidden" /><span
+        class="sm:whitespace-nowrap"
+      >
+        and More</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
