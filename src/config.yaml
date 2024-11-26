@@ -1,5 +1,5 @@
 site:
-  name: New American Ventures
+  name: Ohio Windows and More
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: New American Ventures
-    template: '%s — New American Ventures'
+    default: Ohio Windows and More
+    template: '%s — Ohio Windows and More'
   description: "\U0001F680 The most affordable OTT ad placement for advertising on every plaform provider."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: New American Ventures
+    site_name: Ohio Windows and More
     images:
       - url: '~/assets/images/topstream-ott.png'
         width: 1200
