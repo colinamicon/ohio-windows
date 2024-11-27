@@ -1,5 +1,5 @@
 site:
-  name: Ohio Windows and More
+  name: Ohio Windows & More
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Ohio Windows and More
-    template: '%s — Ohio Windows and More'
+    default: Ohio Windows & More
+    template: '%s — Ohio Windows & More'
   description: "\U0001F680 The most affordable OTT ad placement for advertising on every plaform provider."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Ohio Windows and More
+    site_name: Ohio Windows & More
     images:
       - url: '~/assets/images/topstream-ott.png'
         width: 1200

@@ -6,16 +6,14 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import ohioWindowsMore from '~/assets/images/ohio-windows-and-more.png';
 
 const metadata = {
-  title: 'Ohio Windows and More - Replacement Window Experts',
+  title: 'Ohio Windows & More - Replacement Window Experts',
   metaDescription:
-    'Ohio Windows and More is a leading replacement window company, specializing in replacement windows and new windows installations.',
+    'Ohio Windows & More is a leading replacement window company, specializing in replacement windows and new windows installations.',
   ignoreTitleTemplate: true,
 };
-
-const heroImage =
-  'https://plus.unsplash.com/premium_photo-1684445035420-cc3aae0560cc?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 ---
 
 <Layout metadata={metadata}>
@@ -32,18 +30,14 @@ const heroImage =
       },
       // { text: 'Learn more', href: '#features', class: 'mx-2' },
     ]}
-    image={{
-      src: heroImage,
-      alt: 'Ohio Windows and More Hero Image',
-    }}
   >
     <Fragment slot="title">
-      Ohio Windows<span class="text-accent dark:text-white highlight"> and More</span>
+      <img src={ohioWindowsMore.src} />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Ohio Windows and More</span> provides top-notch window replacement services, including
+        <span class="font-semibold">Ohio Windows & More</span> provides top-notch window replacement services, including
         trim and door solutions and new window installation.</span
       >
     </Fragment>
@@ -101,7 +95,7 @@ const heroImage =
       },
     ]}
     image={{
-      src: '~/assets/images/ohio-window-replacement.png',
+      src: '~/assets/images/oh-window-demo1.png',
       alt: 'Replacement Windows Image',
       width: '75%',
       height: 'auto',
@@ -123,8 +117,8 @@ const heroImage =
   <Features
     id="features"
     tagline="Features"
-    title="What you get with Ohio Windows and More"
-    subtitle="Experience the difference with Ohio Windows and More's comprehensive supply and installation solutions for trim, doors, and windows."
+    title="What you get with Ohio Windows & More"
+    subtitle="Experience the difference with Ohio Windows & More's comprehensive supply and installation solutions for trim, doors, and windows."
     items={[
       {
         title: 'Improved Energy Efficiency',
@@ -235,7 +229,7 @@ const heroImage =
     </Fragment>
 
     <Fragment slot="subtitle">
-      Ohio Windows and More<br class="hidden md:inline" /> Building your future
+      Ohio Windows & More<br class="hidden md:inline" /> Building your future
     </Fragment>
   </CallToAction>
 </Layout>

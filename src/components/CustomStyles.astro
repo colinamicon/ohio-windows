@@ -1,22 +1,5 @@
 ---
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
 ---
 
 <style is:inline>
@@ -25,19 +8,24 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Nunito';
     --aw-font-heading: 'Nunito';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(164, 41, 34);
+    /* Primary Colors */
+    --aw-color-primary: rgb(189, 106, 106); /* Soft crimson */
+    --aw-color-secondary: rgb(193, 14, 14); /* Bold deep red */
+    --aw-color-accent: rgb(255, 187, 59); /* Gold for contrast */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    /* Text Colors */
+    --aw-color-text-heading: rgb(20, 20, 20); /* Dark gray for headings */
+    --aw-color-text-default: rgb(45, 45, 45); /* Default text */
+    --aw-color-text-muted: rgb(45, 45, 45 / 66%); /* Muted text */
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    /* Background Colors */
+    --aw-color-bg-page: rgb(250, 245, 245); /* Light crimson tint for the background */
+    --aw-color-bg-page-dark: rgb(41, 0, 0); /* Dark red for dark mode background */
 
+    /* Selection Colors */
     ::selection {
-      background-color: lavender;
+      background-color: rgb(193, 14, 14); /* Bold deep red */
+      color: snow;
     }
   }
 
@@ -46,18 +34,24 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Nunito';
     --aw-font-heading: 'Nunito';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Dark Mode Primary Colors */
+    --aw-color-primary: rgb(189, 106, 106); /* Same soft crimson */
+    --aw-color-secondary: rgb(193, 14, 14); /* Same bold deep red */
+    --aw-color-accent: rgb(255, 140, 50); /* Warmer gold for dark mode contrast */
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(4, 6, 20);
+    /* Text Colors */
+    --aw-color-text-heading: rgb(240, 240, 240); /* Light gray for headings */
+    --aw-color-text-default: rgb(220, 220, 220); /* Default light text */
+    --aw-color-text-muted: rgb(220, 220, 220 / 66%); /* Muted light text */
 
+    /* Background Colors */
+    --aw-color-bg-page: rgb(43, 43, 43); /* Dark red for main background */
+    --aw-color-bg-page-dark: rgb(20, 0, 0); /* Even darker red for deep contrast */
+
+    /* Selection Colors */
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(189, 106, 106); /* Gold for selection */
+      color: rgb(41, 0, 0); /* Dark red text */
     }
   }
 </style>
