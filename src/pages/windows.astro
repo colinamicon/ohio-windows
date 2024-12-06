@@ -3,8 +3,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroImageHeader from '~/components/widgets/HeroImageHeader.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import ohWindows from '~/assets/images/replacement-windows.png';
 
 const metadata = {
   title: 'Replacement-windows',
@@ -14,7 +15,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="Replacement Windows">
+  <HeroImageHeader tagline="Replacement Windows" image={ohWindows}>
     <Fragment slot="title">
       <span class="text-primary dark:text-white highlight"> Transform Your Home with Premium Replacement Windows </span>
     </Fragment>
@@ -22,13 +23,8 @@ const metadata = {
     <Fragment slot="subtitle">
       Upgrade to energy-efficient, stylish windows designed to enhance your home's value and comfort. Explore our
       Pinnacle Series with Lifetime Warranty, Glass Break Coverage, and a variety of color options.
-      <a
-        href="https://www.thefreedomwindow.com/vinyl-windows"
-        target="_blank"
-        style="border: 1px solid black; cursor: pointer;">Learn more</a
-      >.
     </Fragment>
-  </Hero>
+  </HeroImageHeader>
 
   <!-- Content Widget **************** -->
 

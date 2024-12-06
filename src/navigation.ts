@@ -1,63 +1,47 @@
 // import { getPermalink, getAsset } from './utils/permalinks';
 
+import { getBlogPermalink, getPermalink } from './utils/permalinks';
+
 export const headerData = {
-  // links: [
-  //   // deleted homes
-  //   {
-  //     text: 'Pages',
-  //     links: [
-  //       {
-  //         text: 'Services',
-  //         href: getPermalink('/services'),
-  //       },
-  //       {
-  //         text: 'Pricing',
-  //         href: getPermalink('/pricing'),
-  //       },
-  //       {
-  //         text: 'About us',
-  //         href: getPermalink('/about'),
-  //       },
-  //       {
-  //         text: 'Contact',
-  //         href: getPermalink('/contact'),
-  //       },
-  //       // {
-  //       //   text: 'Terms',
-  //       //   href: getPermalink('/terms'),
-  //       // },
-  //       // {
-  //       //   text: 'Privacy policy',
-  //       //   href: getPermalink('/privacy'),
-  //       // },
-  //     ],
-  //   },
-  //   {
-  //     text: 'Blog',
-  //     links: [
-  //       {
-  //         text: 'Blog List',
-  //         href: getBlogPermalink(),
-  //       },
-  //       // {
-  //       //   text: 'Article',
-  //       //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-  //       // },
-  //       // {
-  //       //   text: 'Article (with MDX)',
-  //       //   href: getPermalink('markdown-elements-demo-post', 'post'),
-  //       // },
-  //     ],
-  //   },
-  //   {
-  //     text: 'Locations',
-  //     href: '#',
-  //   },
-  //   {
-  //     text: 'Support',
-  //     href: '#',
-  //   },
-  // ],
+  links: [
+    {
+      text: 'About',
+      href: getPermalink('/about'),
+    },
+    {
+      text: 'Windows',
+      href: getPermalink('/windows'),
+    },
+    {
+      text: 'Construction',
+      href: getPermalink('/new-construction'),
+    },
+    {
+      text: 'Roofing',
+      href: getPermalink('/roofing'),
+    },
+    {
+      text: 'Siding',
+      href: getPermalink('/siding'),
+    },
+    {
+      text: 'Blog',
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        // {
+        //   text: 'Article',
+        //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        // },
+        // {
+        //   text: 'Article (with MDX)',
+        //   href: getPermalink('markdown-elements-demo-post', 'post'),
+        // },
+      ],
+    },
+  ],
   actions: [{ text: 'Contact', href: '/contact' }],
 };
 

@@ -1,0 +1,68 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+
+import type { Hero as Props } from '~/types';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.props.image,
+  id,
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<section class={`relative not-prose m-0 p-0 ${bg === 'dark' ? 'bg-gray-900 text-white' : ''}`} {...id ? { id } : {}}>
+  <!-- Split Grid with Responsive Behavior -->
+  <div class="grid grid-cols-1 md:grid-cols-2 auto-rows-fr">
+    <!-- Card-Style Text Block (Left Side) -->
+    <div
+      class="flex items-center justify-center p-8 md:p-12 bg-white shadow-lg relative z-10 order-2 md:order-1 dark:bg-gray-600"
+    >
+      <div class="max-w-lg w-full">
+        {
+          tagline && (
+            <p
+              class="text-base text-secondary dark:text-gray-400 font-bold tracking-wide uppercase mb-2"
+              set:html={tagline}
+            />
+          )
+        }
+        {
+          title && (
+            <h1
+              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              set:html={title}
+            />
+          )
+        }
+        {subtitle && <p class="max-w-3xl text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+        {
+          actions && (
+            <div class="flex flex-wrap gap-4">
+              {Array.isArray(actions) ? (
+                actions.map((action) => <Button {...(action || {})} class="py-2 px-4" />)
+              ) : (
+                <Fragment set:html={actions} />
+              )}
+            </div>
+          )
+        }
+        {content && <Fragment set:html={content} />}
+      </div>
+    </div>
+
+    <!-- Image Block (Right Side) -->
+    <div class="relative w-full h-[400px] md:h-auto order-1 md:order-2">
+      {
+        image && (
+          <Image src={image.src} alt={image.alt || 'Hero Image'} class="absolute inset-0 object-cover w-full h-full" />
+        )
+      }
+    </div>
+  </div>
+</section>

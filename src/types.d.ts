@@ -216,7 +216,8 @@ export interface Form {
 export interface Hero extends Omit<Headline, 'classes'>, Omit<Widget, 'isDark' | 'classes'> {
   content?: string;
   actions?: string | CallToAction[];
-  image?: string | unknown;
+  image?: Image;
+  bgColor?: string;
 }
 
 export interface Team extends Omit<Headline, 'classes'>, Widget {
