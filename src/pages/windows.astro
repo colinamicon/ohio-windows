@@ -1,0 +1,152 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Replacement-windows',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="Replacement Windows">
+    <Fragment slot="title">
+      <span class="text-primary dark:text-white highlight"> Transform Your Home with Premium Replacement Windows </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Upgrade to energy-efficient, stylish windows designed to enhance your home's value and comfort. Explore our
+      Pinnacle Series with Lifetime Warranty, Glass Break Coverage, and a variety of color options.
+      <a
+        href="https://www.thefreedomwindow.com/vinyl-windows"
+        target="_blank"
+        style="border: 1px solid black; cursor: pointer;">Learn more</a
+      >.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget ************** -->
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Energy-Efficient and Durable"
+    title="Discover the Benefits of Our Replacement Windows"
+    items={[
+      {
+        title: 'Tailored to Your Home',
+        description: 'Choose from a variety of window styles, including double-hung, bay, and storm windows.',
+      },
+      {
+        title: 'Lifetime Peace of Mind',
+        description: 'Enjoy Pinnacle Series windows with Lifetime Warranty and Glass Break Coverage.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image-windows.png',
+      alt: 'Energy-Efficient Replacement Windows',
+      width: '75%',
+      height: 'auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Enhance Comfort and Efficiency</h3>
+      Our energy-efficient windows are engineered to keep your home cozy year-round while lowering energy costs. With a focus
+      on durability and aesthetic appeal, we ensure a perfect fit for every home.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Cost-Effective and Stylish',
+        description:
+          'Upgrade your windows with affordable pricing and customizable options to match your home’s style.',
+      },
+      {
+        title: 'Innovative Window Technology',
+        description:
+          'Experience the latest in window technology with features designed to maximize energy savings and longevity.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/oh-window-demo1.png',
+      alt: 'Energy-Efficient Window Options',
+      width: '75%',
+      height: 'auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built to Last</h3>
+      Pinnacle Series windows provide unmatched durability and performance. With transferable warranties and superior craftsmanship,
+      our windows are a long-term investment in your home’s beauty and efficiency.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Ideas -->
+
+  <!-- Features Section -->
+  <Features3
+    title="Why Choose the Pinnacle Series?"
+    tagline="Exclusive Benefits"
+    items={[
+      {
+        title: 'Lifetime Warranty',
+        description: 'Peace of mind with a lifetime warranty that covers materials and craftsmanship.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Glass Break Coverage',
+        description: 'Accidental glass breakage? No problem. We’ve got you covered.',
+        icon: 'tabler:glass',
+      },
+      {
+        title: 'Transferable Warranties',
+        description: 'Enhance your home’s resale value with transferable warranties for future owners.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Custom Color Options',
+        description: 'Choose from a palette of colors to perfectly complement your home’s aesthetic.',
+        icon: 'tabler:palette',
+      },
+    ]}
+  />
+
+  <!-- Replacement Windows Doc -->
+
+  <Features2
+    title="Contact Us for Your Free Estimate"
+    tagline="Ohio Windows & More"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with Us',
+        description:
+          'Our team is ready to answer your questions and guide you through selecting the perfect windows for your home.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call Us Today',
+        description:
+          'Speak directly with our experts to schedule your free estimate and learn more about our window solutions.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

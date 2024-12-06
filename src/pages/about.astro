@@ -2,8 +2,6 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -22,147 +20,50 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Unlock the Power of Ad Streaming with <br />
-      <span class="text-accent dark:text-white highlight">Ohio Windows & More</span>
+      <span class="text-primary dark:text-white highlight">Ohio Windows & More</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Reach your target audience with precision and drive real results with our cutting-edge ad streaming technology.
+      With over 30 years of experience in the construction field, Ohio Windows & More brings the expertise, simplicity,
+      and satisfaction you need right to your front door. Locally owned and operated, our team of skilled craftsmen are
+      dedicated to delivering top-notch carpentry services, from replacement windows to siding to roofing, we tailor
+      everything to meet your unique needs. Whether you’re renovating your home or embarking on a new construction
+      project, you can trust Ohio Windows & More to enhance the beauty and functionality of your spaces with precision
+      and care. Let us turn your vision into reality with our unparalleled craftsmanship and dedication to excellence.
     </Fragment>
   </Hero>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Ad Impressions', amount: '10M+' },
-      { title: 'Advertisers', amount: '500+' },
-      { title: 'Publisher Partners', amount: '200+' },
-      { title: 'Awards', amount: '10+' },
-    ]}
-  />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our Ad Streaming Solutions"
+    title="Our Services"
     subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Targeted Ad Delivery',
+        title: 'Replacement Windows',
         description:
           'Reach your target audience with precision and drive real results with our cutting-edge ad streaming technology.',
-        icon: 'tabler:chart-bar',
+        icon: 'tabler:window',
       },
       {
-        title: 'Real-Time Ad Analytics',
+        title: 'Roofing',
         description:
           'Make data-driven decisions with our real-time ad analytics, providing you with actionable insights to optimize your ad performance.',
-        icon: 'tabler:chart-pie',
+        icon: 'tabler:home',
       },
       {
-        title: 'Streamlined Ad Management',
+        title: 'Siding',
         description:
           'Effortlessly create, manage, and optimize your ad campaigns with our intuitive platform, designed to save you time and resources.',
-        icon: 'tabler:clock',
+        icon: 'tabler:wind',
       },
     ]}
   />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'High-Performing Ad Templates',
-        description:
-          'Get instant access to our library of high-performing ad templates, expertly crafted to drive engagement and conversions.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Advanced Ad Targeting',
-        description:
-          'Reach your target audience with precision using our advanced ad targeting options, including demographics, interests, and behaviors.',
-        icon: 'tabler:target',
-      },
-      {
-        title: 'Dedicated Support',
-        description:
-          'Get the support you need to succeed with our dedicated team of ad streaming experts, available to help you every step of the way.',
-        icon: 'tabler:headset',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Industry Recognition',
-        description: 'We have been recognized as industry leaders in ad streaming, with numerous awards and accolades.',
-        icon: 'tabler:award',
-      },
-      {
-        title: 'Global Reach',
-        description:
-          'Our ad streaming solutions have been adopted by customers worldwide, with a presence in over 100 countries.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive Customer Feedback',
-        description: 'Our customers rave about our ad streaming solutions, with a 95% satisfaction rate and counting.',
-        icon: 'tabler:message-star',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our Locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
+    title="Ohio Windows & More"
     tagline="Contact us"
     columns={2}
     items={[

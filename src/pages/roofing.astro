@@ -1,0 +1,105 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Roofing',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="Roofing">
+    <Fragment slot="title">
+      <span class="text-primary dark:text-white highlight">Ohio Windows & More</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Installing a new roof for your home provides numerous benefits that enhance both the functionality and value of
+      your property. Here’s an overview of the key advantages:
+    </Fragment>
+  </Hero>
+
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="Features"
+    title="What You Get with a New Roof"
+    subtitle="Experience the numerous benefits of modern roofing systems."
+    items={[
+      {
+        title: 'Improved Protection',
+        description: `A new roof ensures your home is safeguarded against leaks, wind, snow, and other environmental factors. Modern roofing materials offer enhanced resistance to mold, mildew, and pests.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Enhanced Energy Efficiency',
+        description: `Upgraded roofing materials often come with better insulation properties, reducing energy loss. Reflective roofing options help maintain cooler indoor temperatures during hot months, lowering energy bills.`,
+        icon: 'tabler:sun',
+      },
+      {
+        title: 'Increased Home Value',
+        description: `A new roof is a significant selling point for potential buyers, boosting your home’s resale value. It improves curb appeal, giving your home a fresh, well-maintained look.`,
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Lower Maintenance and Repair Costs',
+        description: `Replacing an aging or damaged roof minimizes ongoing repair expenses. Modern roofs require less frequent maintenance due to advanced materials and installation techniques.`,
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Improved Safety',
+        description: `An aging roof can pose safety risks, such as structural instability or falling shingles. A new roof ensures compliance with updated building codes and standards.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Enhanced Aesthetic Appeal',
+        description: `Modern roofing options come in various colors, textures, and styles, allowing you to match your home’s architectural design. A well-designed roof can transform the overall appearance of your home.`,
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Better Weather Resistance',
+        description: `New roofing systems are designed to withstand extreme weather conditions, including heavy rain, snow, and high winds. Many options include waterproof or weatherproof technology for added durability.`,
+        icon: 'tabler:cloud-storm',
+      },
+      {
+        title: 'Long-Term Warranties',
+        description: `Most new roofs come with extensive warranties, providing peace of mind for years. This ensures your investment is protected against unexpected issues.`,
+        icon: 'tabler:file-certificate',
+      },
+      {
+        title: 'Noise Reduction',
+        description: `Improved roofing materials and insulation help block outside noise, creating a quieter and more comfortable living environment.`,
+        icon: 'tabler:cloud-storm',
+      },
+      {
+        title: 'Environmental Benefits',
+        description: `Many new roofing options use sustainable materials or are recyclable. Reflective or cool roofs help reduce heat islands and your home's carbon footprint.`,
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Ohio Windows & More"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse plateea dictumst. Cras lobortis metus a hendrerit congue.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>
