@@ -1,0 +1,155 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import SidingComparisonChart from '~/components/SidingComparisonChart.tsx';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Siding',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="Siding Solutions">
+    <Fragment slot="title">
+      <span class="text-primary dark:text-white highlight"> Explore Premium Siding Options </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Installing new siding enhances your home's appearance, energy efficiency, and durability. Discover the benefits of
+      upgrading your siding with Ohio Windows & More.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Modern Siding Benefits"
+    title="Why Upgrade Your Siding?"
+    items={[
+      {
+        title: 'Improved Curb Appeal',
+        description: 'New siding gives your home a fresh, modern look with customizable colors and textures.',
+      },
+      {
+        title: 'Increased Energy Efficiency',
+        description: 'Insulated siding improves thermal efficiency, reducing heating and cooling costs.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image-windows.png',
+      alt: 'New Siding Installation',
+      width: '75%',
+      height: 'auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Durable, Stylish, and Efficient
+      </h3>
+      Enhance your home's exterior with siding materials that are designed to last, offering improved weather protection
+      and reduced maintenance.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features3 Section -->
+  <Features2
+    title="Exclusive Benefits of Modern Siding"
+    tagline="Advanced Siding Options"
+    items={[
+      {
+        title: 'Low Maintenance',
+        description: 'Vinyl and composite sidings require minimal upkeep compared to older materials.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Weather Protection',
+        description: 'Advanced materials resist UV rays, wind, and extreme temperatures.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Noise Reduction',
+        description: 'Insulated siding minimizes outside noise for a quieter home.',
+        icon: 'tabler:volume-2',
+      },
+      {
+        title: 'Environmental Benefits',
+        description: 'Sustainable siding options reduce your home’s carbon footprint.',
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="Material Comparison"
+    title="Choosing the Right Siding for Your Home"
+    subtitle="Compare popular siding materials to find the best fit for your needs."
+    items={[
+      {
+        title: 'Vinyl Siding',
+        description:
+          'Affordable, low-maintenance, and available in many styles. Insulated options improve energy efficiency.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Fiber Cement',
+        description: 'Durable and fire-resistant, mimicking wood and masonry for a high-end appearance.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Wood Siding',
+        description: 'Classic and natural look but requires regular maintenance to prevent rot.',
+        icon: 'tabler:tree',
+      },
+      {
+        title: 'Metal Siding',
+        description: 'Eco-friendly and durable, but can dent and be noisy without insulation.',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Brick and Stucco',
+        description: 'Elegant and long-lasting but comes with higher upfront costs.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Stone Veneer',
+        description: 'Lightweight and visually stunning, but installation costs can be high.',
+        icon: 'tabler:diamond',
+      },
+    ]}
+  />
+
+  <h3 class="text-xl font-bold mb-4 text-center">Siding Material Comparison</h3>
+  <SidingComparisonChart client:load />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Explore Siding<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Options Today</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Contact us to schedule a consultation and explore your options.</Fragment>
+  </CallToAction>
+</Layout>

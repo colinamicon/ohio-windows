@@ -1,7 +1,8 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -29,7 +30,6 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Features3 Widget ************** -->
   <!-- Content Widget **************** -->
 
   <Content
@@ -98,10 +98,8 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Ideas -->
-
-  <!-- Features Section -->
-  <Features3
+  <!-- Features3 Section -->
+  <Features2
     title="Why Choose the Pinnacle Series?"
     tagline="Exclusive Benefits"
     items={[
@@ -113,7 +111,7 @@ const metadata = {
       {
         title: 'Glass Break Coverage',
         description: 'Accidental glass breakage? No problem. We’ve got you covered.',
-        icon: 'tabler:glass',
+        icon: 'tabler:window',
       },
       {
         title: 'Transferable Warranties',
@@ -125,28 +123,81 @@ const metadata = {
         description: 'Choose from a palette of colors to perfectly complement your home’s aesthetic.',
         icon: 'tabler:palette',
       },
+      {
+        title: 'Energy-Efficient Windows',
+        description:
+          'Reduce energy bills and maintain indoor comfort with advanced insulation technologies like Low-E coatings and gas-filled panes.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Noise Reduction',
+        description:
+          'Enjoy a quieter home with windows designed to block outdoor noise, ideal for busy neighborhoods or urban areas.',
+        icon: 'tabler:volume-2',
+      },
     ]}
   />
 
-  <!-- Replacement Windows Doc -->
-
-  <Features2
-    title="Contact Us for Your Free Estimate"
-    tagline="Ohio Windows & More"
-    columns={2}
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="Features"
+    title="What You Get with Replacement Windows"
+    subtitle="Explore the numerous benefits of upgrading to modern, high-performance windows."
     items={[
       {
-        title: 'Chat with Us',
-        description:
-          'Our team is ready to answer your questions and guide you through selecting the perfect windows for your home.',
-        icon: 'tabler:messages',
+        title: 'Improved Energy Efficiency',
+        description: `Replacement windows often feature better insulation technologies, such as double or triple-pane glass, Low-E coatings, and gas fills (like argon or krypton). These features can significantly reduce energy loss, keeping your home warmer in the winter and cooler in the summer. As a result, you can save money on heating and cooling bills.`,
+        icon: 'tabler:temperature',
       },
       {
-        title: 'Call Us Today',
-        description:
-          'Speak directly with our experts to schedule your free estimate and learn more about our window solutions.',
-        icon: 'tabler:headset',
+        title: 'Enhanced Home Comfort',
+        description: `Better-insulated windows help to minimize drafts, reduce noise from outside, and maintain a more consistent temperature throughout your home. Improved thermal performance can also help reduce condensation and related moisture problems inside your home.`,
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Increased Home Value',
+        description: `Replacement windows can boost the market value of your property. They are considered a strong selling point for prospective buyers, especially if they improve the home's energy efficiency and aesthetic appeal. Homeowners can expect a solid return on investment when they upgrade their windows.`,
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Aesthetics and Curb Appeal',
+        description: `New windows can dramatically enhance the appearance of your home, both inside and out. They come in various styles, colors, and finishes to complement your home’s design, allowing for a fresh, updated look that can make your property more visually appealing.`,
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Reduced Maintenance',
+        description: `Modern windows are designed to be low-maintenance. Materials like vinyl and fiberglass require less upkeep than traditional wooden frames, and features like tilt-in sashes make cleaning easier. Durable construction also means they are less likely to need repairs over time.`,
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Improved Security and Safety',
+        description: `Replacement windows often come with upgraded locks and reinforced glass, making your home more secure against break-ins. Additionally, windows that open and close smoothly can serve as emergency exits during fires or other emergencies.`,
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Noise Reduction',
+        description: `Windows with advanced glazing and better seals can greatly reduce noise from the outside. This is especially beneficial if you live in a busy or loud neighborhood and want a quieter indoor environment.`,
+        icon: 'tabler:volume-2',
       },
     ]}
   />
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ohio Windows<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> & More</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Contact us today for a free estimate</Fragment>
+  </CallToAction>
 </Layout>

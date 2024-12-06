@@ -1,0 +1,158 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'ClimateSmart 300 Series',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="ClimateSmart 300 Series">
+    <Fragment slot="title">
+      <span class="text-primary dark:text-white highlight"> Discover the ClimateSmart 300 Series </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The ClimateSmart 300 Series offers innovative window solutions that combine durability, energy efficiency, and
+      style. Designed with advanced features, these windows enhance the comfort and value of your home.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Innovative Design and Durability"
+    title="Why Choose ClimateSmart 300 Series?"
+    items={[
+      {
+        title: 'Fusion-Welded Frame and Sash',
+        description: 'Ensures superior strength and long-term durability for your windows.',
+      },
+      {
+        title: 'Tilt-In Lower Sash',
+        description: 'Facilitates easy cleaning from inside your home for added convenience.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image-windows.png',
+      alt: 'ClimateSmart 300 Series Windows',
+      width: '75%',
+      height: 'auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Engineered for Performance</h3>
+      The ClimateSmart 300 Series windows are designed with advanced features like a strong sill design and dual locks for
+      added security, making them a reliable and stylish choice for any home.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features3 Section -->
+  <Features2
+    title="Exclusive Benefits of ClimateSmart 300 Series"
+    tagline="Advanced Window Technology"
+    items={[
+      {
+        title: 'Fusion-Welded Frame and Sash',
+        description: 'Provides enhanced durability and structural integrity for long-lasting performance.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Glass Break Coverage',
+        description: 'Protects against accidental damage, ensuring peace of mind.',
+        icon: 'tabler:window',
+      },
+      {
+        title: 'Tilt-In Lower Sash',
+        description: 'Simplifies window cleaning with an easy-to-access design.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Energy-Efficient Low-E Glass',
+        description:
+          'Reflects heat back into your home during winter and outside during summer for year-round comfort.',
+        icon: 'tabler:sun',
+      },
+      {
+        title: 'Strong Sill Design',
+        description: 'Enhances exterior aesthetics while minimizing the risk of bowing.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Dual Locks on Wider Windows',
+        description: 'Provides added security and stability for windows 24 inches or wider.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  />
+
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="Features"
+    title="What Makes the ClimateSmart 300 Series Stand Out?"
+    subtitle="Explore the advanced features that set these windows apart from the competition."
+    items={[
+      {
+        title: 'Continuous Reinforcement',
+        description: `Integrated reinforcement in the fixed meeting rail adds structural integrity and stability to your windows.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Block and Tackle Balances',
+        description: `Ensures smooth and reliable window operation over time.`,
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Integral Nailing Fin and J-Channel',
+        description: `Allows for precise and secure siding installation with a pre-punched nailing fin and integral J-channel.`,
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Bulb Seal',
+        description: `Enhances insulation by providing a tight fit between the sash and frame.`,
+        icon: 'tabler:temperature',
+      },
+      {
+        title: 'Traditional Brick Mold Exterior',
+        description: `Delivers a classic and attractive exterior appearance.`,
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Energy-Saving Low-E Glass',
+        description: `Improves energy efficiency with microscopically thin, virtually invisible coatings.`,
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ClimateSmart 300<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Series Windows</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Contact us today to learn more and schedule your free estimate.</Fragment>
+  </CallToAction>
+</Layout>
