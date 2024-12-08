@@ -38,7 +38,7 @@ const {
   actions = [],
   isSticky = false,
   isDark = false,
-  isFullWidth = false,
+  isFullWidth = true,
   showToggleTheme = false,
   // showRssFeed = false,
   position = 'center',
@@ -83,7 +83,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center gap-2 md:gap-4"
       >
         {
           links.map(({ text, href, links }) => (
@@ -113,7 +113,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               ) : (
                 <a
                   class:list={[
-                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-center',
+                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-center min-w-[120px] max-w-[250px] truncate whitespace-nowrap overflow-hidden',
                     { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}

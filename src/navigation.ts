@@ -9,11 +9,11 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
-      text: 'Windows',
-      href: getPermalink('/windows'),
+      text: 'Replacement Windows',
+      href: getPermalink('/replacement-windows'),
     },
     {
-      text: 'Construction',
+      text: 'New Construction',
       href: getPermalink('/new-construction'),
     },
     {

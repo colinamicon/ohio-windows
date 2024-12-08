@@ -18,13 +18,13 @@ metadata:
   openGraph:
     site_name: Ohio Windows & More
     images:
-      - url: '~/assets/images/topstream-ott.png'
+      - url: '~/assets/images/ohio-windows-and-more.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:

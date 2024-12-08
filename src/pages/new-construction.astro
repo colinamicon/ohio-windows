@@ -3,8 +3,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroImageHeader from '~/components/widgets/HeroImageHeader.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import newConstruction from '~/assets/images/new-construction.png';
 
 const metadata = {
   title: 'ClimateSmart 300 Series',
@@ -14,7 +15,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="ClimateSmart 300 Series">
+  <HeroImageHeader tagline="ClimateSmart 300 Series" image={newConstruction}>
     <Fragment slot="title">
       <span class="text-primary dark:text-white highlight"> Discover the ClimateSmart 300 Series </span>
     </Fragment>
@@ -23,7 +24,7 @@ const metadata = {
       The ClimateSmart 300 Series offers innovative window solutions that combine durability, energy efficiency, and
       style. Designed with advanced features, these windows enhance the comfort and value of your home.
     </Fragment>
-  </Hero>
+  </HeroImageHeader>
 
   <!-- Content Widget **************** -->
 
