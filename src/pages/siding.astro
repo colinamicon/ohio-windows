@@ -3,9 +3,11 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import SidingComparisonChart from '~/components/widgets/SidingComparisonChart.astro';
 import Layout from '~/layouts/PageLayout.astro';
+
+import sidingHeader from '~/assets/images/siding-header.png';
+import HeroImageHeader from '~/components/widgets/HeroImageHeader.astro';
 
 const metadata = {
   title: 'Siding',
@@ -15,16 +17,16 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="Siding Solutions">
+  <HeroImageHeader tagline="Siding" image={sidingHeader}>
     <Fragment slot="title">
-      <span class="text-primary dark:text-white highlight"> Explore Premium Siding Options </span>
+      <span class="text-primary dark:text-white highlight"> Ohio Windows & More: Siding </span>
     </Fragment>
 
     <Fragment slot="subtitle">
       Installing new siding enhances your home's appearance, energy efficiency, and durability. Discover the benefits of
       upgrading your siding with Ohio Windows & More.
     </Fragment>
-  </Hero>
+  </HeroImageHeader>
 
   <!-- Content Widget **************** -->
 
@@ -43,7 +45,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/hero-image-windows.png',
+      src: '~/assets/images/siding-features.png',
       alt: 'New Siding Installation',
       width: '75%',
       height: 'auto',

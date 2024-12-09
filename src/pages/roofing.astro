@@ -1,8 +1,10 @@
 ---
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroImageHeader from '~/components/widgets/HeroImageHeader.astro';
 import Layout from '~/layouts/PageLayout.astro';
+
+import roofingImage from '~/assets/images/roofing-image.png';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Roofing',
@@ -12,16 +14,16 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="Roofing">
+  <HeroImageHeader tagline="Roofing" image={roofingImage}>
     <Fragment slot="title">
-      <span class="text-primary dark:text-white highlight">Ohio Windows & More</span>
+      <span class="text-primary dark:text-white highlight"> Ohio Windows & More: Roofing </span>
     </Fragment>
 
     <Fragment slot="subtitle">
       Installing a new roof for your home provides numerous benefits that enhance both the functionality and value of
       your property. Here’s an overview of the key advantages:
     </Fragment>
-  </Hero>
+  </HeroImageHeader>
 
   <!-- Features Section -->
   <Features
@@ -83,23 +85,22 @@ const metadata = {
     ]}
   />
 
-  <Features2
-    title="Ohio Windows & More"
-    tagline="Contact us"
-    columns={2}
-    items={[
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse plateea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
       },
     ]}
-  />
+  >
+    <Fragment slot="title">
+      Ohio Windows<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> & More</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Contact us today for your free roofing estimate</Fragment>
+  </CallToAction>
 </Layout>

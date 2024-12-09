@@ -1,8 +1,9 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import aboutUsImg from '~/assets/images/about-us-header.png';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About us',
@@ -15,7 +16,7 @@ const metadata = {
   <Hero
     tagline="About us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: aboutUsImg.src,
       alt: 'Caos Image',
     }}
   >
@@ -27,9 +28,11 @@ const metadata = {
       With over 30 years of experience in the construction field, Ohio Windows & More brings the expertise, simplicity,
       and satisfaction you need right to your front door. Locally owned and operated, our team of skilled craftsmen are
       dedicated to delivering top-notch carpentry services, from replacement windows to siding to roofing, we tailor
-      everything to meet your unique needs. Whether you’re renovating your home or embarking on a new construction
-      project, you can trust Ohio Windows & More to enhance the beauty and functionality of your spaces with precision
-      and care. Let us turn your vision into reality with our unparalleled craftsmanship and dedication to excellence.
+      everything to meet your unique needs.
+      <br />
+      Whether you’re renovating your home or embarking on a new construction project, you can trust Ohio Windows & More to
+      enhance the beauty and functionality of your spaces with precision and care. Let us turn your vision into reality with
+      our unparalleled craftsmanship and dedication to excellence.
     </Fragment>
   </Hero>
 
@@ -37,48 +40,47 @@ const metadata = {
 
   <Features3
     title="Our Services"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    subtitle="Enhance your home's beauty, efficiency, and value with our premium replacement windows, roofing, and siding solutions."
     columns={3}
     isBeforeContent={true}
     items={[
       {
         title: 'Replacement Windows',
         description:
-          'Reach your target audience with precision and drive real results with our cutting-edge ad streaming technology.',
+          'Upgrade to energy-efficient windows that improve comfort, lower energy bills, and add value to your home. Our custom window solutions include double-hung, vinyl, and storm windows tailored to your needs.',
         icon: 'tabler:window',
       },
       {
         title: 'Roofing',
         description:
-          'Make data-driven decisions with our real-time ad analytics, providing you with actionable insights to optimize your ad performance.',
+          'Protect your home with durable, high-quality roofing systems designed to withstand the toughest weather conditions. Our roofing solutions combine functionality with curb appeal to increase property value.',
         icon: 'tabler:home',
       },
       {
         title: 'Siding',
         description:
-          'Effortlessly create, manage, and optimize your ad campaigns with our intuitive platform, designed to save you time and resources.',
+          'Transform your home’s exterior with premium siding options that boost energy efficiency, reduce maintenance, and improve weather resistance. Choose from vinyl, fiber cement, or wood siding to suit your style.',
         icon: 'tabler:wind',
       },
     ]}
   />
 
-  <Features2
-    title="Ohio Windows & More"
-    tagline="Contact us"
-    columns={2}
-    items={[
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse plateea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
       },
     ]}
-  />
+  >
+    <Fragment slot="title">
+      Ohio Windows<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> & More</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Contact us today for a free estimate</Fragment>
+  </CallToAction>
 </Layout>
