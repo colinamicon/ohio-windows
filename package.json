@@ -19,7 +19,8 @@
     "check:prettier": "prettier --check .",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w ."
+    "fix:prettier": "prettier -w .",
+    "fcb": "npm run fix && npm run check && npm run build"
   },
   "dependencies": {
     "@astrojs/react": "^3.6.2",
