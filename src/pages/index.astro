@@ -1,12 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ohioWindowsMore from '~/assets/images/ohio-windows-and-more.png';
+import sidingHeader from '~/assets/images/replacement-windows.jpg';
+import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
   title: 'Ohio Windows & More - Replacement Window Experts',
@@ -20,6 +21,8 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    logo={ohioWindowsMore}
+    image={sidingHeader}
     actions={[
       {
         variant: 'primary',
@@ -31,14 +34,10 @@ const metadata = {
       // { text: 'Learn more', href: '#features', class: 'mx-2' },
     ]}
   >
-    <Fragment slot="title">
-      <img src={ohioWindowsMore.src} />
-    </Fragment>
-
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Ohio Windows & More</span> provides top-notch window replacement services, including
-        trim and door solutions and new window installation.</span
+        <span class="font-semibold">Ohio Windows & More</span> provides top-notch window replacement services, new window
+        installation, siding, and roofing services.</span
       >
     </Fragment>
   </Hero>
@@ -60,7 +59,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/replacement-window-advantage.png',
+      src: '~/assets/images/replacement-window-advantage.jpg',
       alt: 'Replacement Windows Image',
       width: '75%',
       height: 'auto',
@@ -95,7 +94,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/windows-hero-secondary.png',
+      src: '~/assets/images/windows-hero-secondary.jpg',
       alt: 'Replacement Windows Image',
       width: '75%',
       height: 'auto',

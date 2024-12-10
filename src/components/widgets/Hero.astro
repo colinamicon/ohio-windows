@@ -8,83 +8,76 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
-
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
-
+  image = await Astro.props.image,
+  logo = await Astro.props.logo, // Logo slot added
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-    <slot name="bg">
-      {bg ? <Fragment set:html={bg} /> : null}
-    </slot>
+<section class={`relative not-prose m-0 p-0 ${bg === 'dark' ? 'bg-gray-100 text-white' : ''}`} {...id ? { id } : {}}>
+  <!-- Full-width Image Block -->
+  <div class="relative w-full h-[250px] md:h-[300px] lg:h-[375px] xl:h-[500px] overflow-hidden">
+    {
+      image && (
+        <Image
+          src={image.src}
+          alt={image.alt || 'Hero Image'}
+          class="absolute inset-x-0 top-0 object-cover w-full h-full"
+        />
+      )
+    }
   </div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-        {
-          tagline && (
-            <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
-              set:html={tagline}
-            />
-          )
-        }
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-left text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          {
-            actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-                {Array.isArray(actions) ? (
-                  actions.map((action) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
-        </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
-      </div>
+
+  <!-- Logo and Content Section -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 -mt-8">
+    <!-- Centered Logo -->
+    <div class="flex justify-center">
+      {
+        logo && (
+          <div
+            class="bg-white dark:bg-transparent p-8 shadow-lg"
+            style="width: 50vw; height: 25vw; min-width: 300px; min-height: 150px;"
+          >
+            <Image src={logo.src} alt={logo.alt || 'Logo'} class="h-full w-full object-contain" />
+          </div>
+        )
+      }
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-center mt-8">
+      {
+        tagline && (
+          <p
+            class="text-base text-secondary dark:text-gray-400 font-bold tracking-wide uppercase mb-2"
+            set:html={tagline}
+          />
+        )
+      }
+      {
+        title && (
+          <h1
+            class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+            set:html={title}
+          />
+        )
+      }
+      {subtitle && <p class="max-w-3xl mx-auto text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+      {
+        actions && (
+          <div class="flex flex-wrap justify-center gap-4">
+            {Array.isArray(actions) ? (
+              actions.map((action) => <Button {...(action || {})} class="py-2 px-4" />)
+            ) : (
+              <Fragment set:html={actions} />
+            )}
+          </div>
+        )
+      }
+      {content && <Fragment set:html={content} />}
     </div>
   </div>
 </section>

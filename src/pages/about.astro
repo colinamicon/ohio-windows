@@ -2,7 +2,8 @@
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import aboutUsImg from '~/assets/images/about-us-header.png';
+import aboutUsImg from '~/assets/images/about-us-header.jpg';
+import ohioWindowsMore from '~/assets/images/ohio-windows-and-more.png';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -14,6 +15,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    logo={ohioWindowsMore}
     tagline="About us"
     image={{
       src: aboutUsImg.src,
@@ -29,6 +31,7 @@ const metadata = {
       and satisfaction you need right to your front door. Locally owned and operated, our team of skilled craftsmen are
       dedicated to delivering top-notch carpentry services, from replacement windows to siding to roofing, we tailor
       everything to meet your unique needs.
+      <br />
       <br />
       Whether you’re renovating your home or embarking on a new construction project, you can trust Ohio Windows & More to
       enhance the beauty and functionality of your spaces with precision and care. Let us turn your vision into reality with
